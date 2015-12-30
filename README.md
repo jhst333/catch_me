@@ -8,6 +8,7 @@
 Example
 -------
 
+    ```c++
     #include <catch_me.hpp>
     #include <iostream>
     
@@ -27,6 +28,7 @@ Example
         { case error_codes::success: std::cout << "Success!\n"; break;
           default: std::cout << "Error!\n"; }
         std::cout << "[!] " << _e.reason() << std::endl; } }
+```
 
 Above example presents all essential capabilities of this meta-header.
 
