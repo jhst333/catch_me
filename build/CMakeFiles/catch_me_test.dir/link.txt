@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/catch_me_test.dir/test/test.cc.o  -o catch_me_test -rdynamic -lboost_unit_test_framework-mt 
