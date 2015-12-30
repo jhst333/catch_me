@@ -55,3 +55,9 @@ BOOST_AUTO_TEST_CASE(CatchMe010)
   try { throw(catch_me::exception_t<my_class>(my_class("asd"), "%s", "a")); }
   catch (const catch_me::exception_t<my_class>& _exception)
   { BOOST_CHECK(_exception.error().str() == "asd"); } }
+
+BOOST_AUTO_TEST_CASE(CatchMe011)
+{ BOOST_CHECK_THROW(catch_me::exception_t<>("\x1F").error(), std::runtime_error); }
+
+BOOST_AUTO_TEST_CASE(CatchMe012)
+{ BOOST_CHECK_THROW(catch_me::exception_t<>("\x7F").error(), std::runtime_error); }

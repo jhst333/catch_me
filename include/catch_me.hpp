@@ -14,7 +14,8 @@ namespace catch_me
      inline uint32_t safe_string_length(const char* _string) throw (std::runtime_error)
      { uint32_t index = 0;
        for (; _string[index]; index++)
-       { if (_string[index] < 32 &&
+       { if ((_string[index] < 32 ||
+              _string[index] >= 127) &&
              _string[index] != '\n') throw (std::runtime_error("[catch_me::exception_t]: Invalid string.")); }
        #ifdef DEBUG
         std::printf("[DEBUG] Length of '%s' is %d\n", _string, index);
