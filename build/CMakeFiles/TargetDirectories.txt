@@ -1,0 +1,2 @@
+/home/master/projects/WhiteHat/catch_me/build/CMakeFiles/catch_me_example.dir
+/home/master/projects/WhiteHat/catch_me/build/CMakeFiles/catch_me_test.dir

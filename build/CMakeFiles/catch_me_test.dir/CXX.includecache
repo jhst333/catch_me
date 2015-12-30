@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/catch_me.hpp
+type_traits
+-
+cstdint
+-
+cstdio
+-
+stdexcept
+-
+
+/home/master/projects/WhiteHat/catch_me/test/test.cc
+catch_me.hpp
+/home/master/projects/WhiteHat/catch_me/test/catch_me.hpp
+boost/test/unit_test.hpp
+-
+
