@@ -55,13 +55,13 @@ catch_me::exception_t<my_type_or_none>("Format string");
 catch_me::exception_t::reason();
 catch_me::exception_t::error();
 ```
-*::reason()*, will return *const char\** string that contains a reason string.
+*::reason()*, will return pointer *const char* string that contains a reason string.
 *::error()*, will return const reference to user's *error object*/*value*.
 
 #### Security considerations
  - *catch_me::exception_t* doesn't check if *format specifiers* are right for given *argument pack* yet.
  - If amount of *format specifiers* is not equal to amount of arguments, it will throw *std::runtime_error*.
- - If first argument (omitting *error value*) is not convertible to *const char\**, it will throw *std::runtime_error*.
+ - If first argument (omitting *error value*) is not convertible to pointer of *const char*, it will throw *std::runtime_error*.
  - If any of the format strings will contain *non-printable* symbols (except for *newline*) from *ASCII* set, it will throw *std::runtime_error*.
  - You should not construct *catch_me::exception_t* if there is no space on heap.
 
