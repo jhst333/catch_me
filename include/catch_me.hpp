@@ -7,7 +7,7 @@
 #include <stdexcept>
 
 namespace catch_me
-{ template <typename error_object_t = uint32_t>
+{ template <typename error_object_t = int32_t>
   class exception_t
   { private:
      //#:- Utils
@@ -69,7 +69,7 @@ namespace catch_me
         throw (std::runtime_error("[catch_me::exception_t]: No arguments for format specifiers."));
        reason_m = new char [format_string_length + 1];
        reason_m[format_string_length] = '\0';
-       std::snprintf(reason_m, format_string_length + 1, _argument);}
+       std::snprintf(reason_m, format_string_length + 1, _argument); }
      template <typename argument_t>
      exception_t(error_object_t _error_object, argument_t _argument) throw (std::runtime_error)
                  :error_object_m(_error_object)

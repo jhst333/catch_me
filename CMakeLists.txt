@@ -8,9 +8,17 @@
  find_package(Boost COMPONENTS unit_test_framework)
 
 #//: Example
- add_executable             (catch_me_example example/example.cc)
- target_include_directories (catch_me_example PUBLIC include/)
- target_compile_options     (catch_me_example PUBLIC -Wall -Wextra -pedantic -std=c++11 -fPIC -Ofast)
+ add_executable             (catch_me_example1 example/example1.cc)
+ target_include_directories (catch_me_example1 PUBLIC include/)
+ target_compile_options     (catch_me_example1 PUBLIC -Wall -Wextra -pedantic -std=c++11 -fPIC -Ofast)
+
+ add_executable             (catch_me_example2 example/example2.cc)
+ target_include_directories (catch_me_example2 PUBLIC include/)
+ target_compile_options     (catch_me_example2 PUBLIC -Wall -Wextra -pedantic -std=c++11 -fPIC -Ofast)
+
+ add_executable             (catch_me_example3 example/example3.cc)
+ target_include_directories (catch_me_example3 PUBLIC include/)
+ target_compile_options     (catch_me_example3 PUBLIC -Wall -Wextra -pedantic -std=c++11 -fPIC -Ofast)
 
 #//: Test
  if (Boost_UNIT_TEST_FRAMEWORK_LIBRARY)
