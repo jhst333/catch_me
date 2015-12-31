@@ -55,7 +55,7 @@ catch_me::exception_t<my_type_or_none>("Format string");
 catch_me::exception_t::reason();
 catch_me::exception_t::error();
 ```
-*::reason()*, will return *const char** string that contains a reason string.
+*::reason()*, will return *const char\** string that contains a reason string.
 *::error()*, will return const reference to user's *error object*/*value*.
 
 #### Security considerations
