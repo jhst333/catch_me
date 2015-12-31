@@ -1,13 +1,9 @@
-*Catch_me*
-==========
-
-***Catch_me*** is a simple meta-header designed to ease generation of exception objects.
+**Catch_me** is a simple meta-header designed to ease generation of exception objects.
 
  - Uses *std::printf* format strings to create *fail reason* string.
  - Allows developer to use his/her own *error objects*.
 
-Example
-----------
+#### Example
 ```c++
 #include <catch_me.hpp>
 #include <iostream>
@@ -62,16 +58,14 @@ catch_me::exception_t::error();
 *::reason()*, will return *const char** string that contains a reason string.
 *::error()*, will return const reference to user's *error object*/*value*.
 
-Security considerations
-----------------------
+#### Security considerations
  - *catch_me::exception_t* doesn't check if *format specifiers* are right for given *argument pack* yet.
  - If amount of *format specifiers* is not equal to amount of arguments, it will throw *std::runtime_error*.
- - If first argument (omitting *error value*) is not convertible to *const char**, it will throw *std::runtime_error*.
+ - If first argument (omitting *error value*) is not convertible to *const char\**, it will throw *std::runtime_error*.
  - If any of the format strings will contain *non-printable* symbols (except for *newline*) from *ASCII* set, it will throw *std::runtime_error*.
  - You should not construct *catch_me::exception_t* if there is no space on heap.
 
-How to install
----------------------
+#### How to install
 ```
 $ git clone https://github.com/jhst333/catch_me.git
 $ cd catch_me/
