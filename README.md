@@ -33,7 +33,7 @@ Defines user *error type*.
 ```c++
 catch_me::exception_t<error_codes>( ... );
 ```
-*catch_me::exception_t* is a class template that takes *error type* as template argument. If template is left without user's *error type*, then default *uint32_t* is given. User's *error type* must be *copy-constructible* and must offer default, parameterless constructor in order to compile with more complex *error types*. 
+*catch_me::exception_t* is a class template that takes *error type* as template argument. If template is left without user's *error type*, then default *int32_t* is given. User's *error type* must be *copy-constructible* and must offer default, parameterless constructor in order to compile with more complex *error types*. 
 ```c++
 < ... >(error_codes::not_found, ... );
 ```
