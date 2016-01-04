@@ -18,7 +18,7 @@ namespace catch_me
               _string[index] >= 127) &&
              _string[index] != '\n') throw (std::runtime_error("[catch_me::exception_t]: Invalid string.")); }
        #ifdef DEBUG
-        std::printf("[DEBUG] Length of '%s' is %d\n", _string, index);
+        std::printf("[DEBUG <catch_me::exception_t>] Length of '%s' is %d\n", _string, index);
        #endif
        return index; }
      inline uint32_t format_specifiers(const char* _string, uint32_t _length) throw (std::runtime_error)
@@ -29,7 +29,7 @@ namespace catch_me
            if (index >= _length) throw (std::runtime_error("[catch_me::exception_t]: Invalid format specifier."));
            if (_string[index] != '%') ++options; } }
        #ifdef DEBUG
-        std::printf("[DEBUG] Amount of format specifiers for '%s' is %d\n", _string, options);
+        std::printf("[DEBUG <catch_me::exception_t>] Amount of format specifiers for '%s' is %d\n", _string, options);
        #endif
        return options; }
     public:
